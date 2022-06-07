@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+}
+
+/* gradient z neta */
+.box {
+  --a: 80deg;
+  --l: 10%;
+  --c: red;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: linear-gradient(
+    var(--a),
+    var(--c) var(--l),
+    blue,
+    var(--c) calc(100% - var(--l))
+  );
+}
+
+/* div obejmujący cały kalulator do pozycjnowania */
+div.calculator {
+  position: absolute;
+  width: 35%;
+  height: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+}
+/* sekcja dla obliczeń */
+section.result {
+  height: 35%;
+  width: 95%;
+}
+/* sekcaja dla buttonów */
+section.calc {
+  height: 85%;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/* div dla wyniku */
+div.previousNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5%;
+  width: 100%;
+  height: 100%;
+  border: 5px solid white;
+  border-radius: 15%;
+  color: white;
+  font-weight: 900;
+  font-size: 46px;
+}
+
+/* div zawiera po 4 buttony */
+div.column {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 20%;
+}
+
+.column4 button {
+    width: 18%;
+  }
+
+/* pole tekstowe */
+/* input {
+  margin-left: 10%;
+  width: 80%;
+  height: 90%;
+  font-size: 40px;
+  text-indent: 5%;
+  color: white;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 15%;
+  transition: 0.1s linear;
+} */
+
+/* input:hover {
+  background-color: black;
+} */
+
+/* stylizacja buttonów, niestety nie dziedziczą prawie nic */
+button {
+  display: inline-block;
+  font-size: 50px;
+  width: 20%;
+  border-radius: 20%;
+  background-color: transparent;
+  color: white;
+  font-weight: 900;
+  border: 3px solid white;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}
